@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<title>Online Assessment</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<style>
+		body {
+			background-color: #F0FFFF;
+		}
+
+		.text {
+			font-family: Gill Sans, sans-serif;
+			font-size: medium;
+			padding-top: 20px;
+		}
+
+		.container {
+			padding-top: 200;
+			padding-bottom: 200;
+			padding-left: 400;
+			padding-right: 400;
+		}
+
+		.exam {
+			-moz-box-shadow: 0 0 5px 5px #888;
+			-webkit-box-shadow: 0 0 5px 5px#888;
+			box-shadow: 0 0 5px 5px #888;
+			background-color: white;
+		}
+
+		table {
+			padding-top: 20px;
+		}
+
+		button {
+			padding-left: 100px;
+		}
+
+		/* .exam {
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-moz-box-shadow: 5px 5px 5px black;
+			-webkit-box-shadow: 5px 5px 5px black;
+			box-shadow: 5px 5px 5px black;
+			}*/
+	</style>
+</head>
+
+<body>
+	<div class="container my-2">
+		<div class="exam">
+
+			<form th:action="@{/submitQuiz}" th:object="${submission}">
+				<table border="0">
+					<tr>
+						<td class="text">Q.</td>
+						<td class="text" th:text="${question.questionTitle}"></td>
+					</tr>
+					<tr>
+						<td class="text"><input type="radio" th:value="${question.option1}" name="selectedOption"></td>
+						<td class="text" th:text="${question.option1}"></td>
+					</tr>
+					<tr>
+						<td class="text"><input type="radio" th:value="${question.option2}" name="selectedOption"></td>
+						<td class="text" th:text="${question.option2}"></td>
+					</tr>
+					<tr>
+						<td class="text"><input type="radio" th:value="${question.option3}" name="selectedOption"></td>
+						<td class="text" th:text="${question.option3}"></td>
+					</tr>
+					<tr>
+						<td class="text"><input type="radio" th:value="${question.option4}" name="selectedOption"></td>
+						<td class="text" th:text="${question.option4}"></td>
+					</tr>
+				</table>
+				<button type="submit" class="btn btn-outline-success rounded-pill px-3 d-none d-lg-block">Next</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous">
+		</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+	</script>
+
+</html>

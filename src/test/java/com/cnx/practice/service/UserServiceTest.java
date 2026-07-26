@@ -11,11 +11,12 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.cnx.practice.model.Instructor;
-import com.cnx.practice.model.Student;
-import com.cnx.practice.model.User;
-import com.cnx.practice.repository.InstructorRepository;
-import com.cnx.practice.repository.StudentRepository;
+import com.aasritha.onlineassessment.model.Instructor;
+import com.aasritha.onlineassessment.model.Student;
+import com.aasritha.onlineassessment.model.User;
+import com.aasritha.onlineassessment.repository.InstructorRepository;
+import com.aasritha.onlineassessment.repository.StudentRepository;
+import com.aasritha.onlineassessment.service.IUserService;
 
 @RunWith(SpringRunner.class)
 public class UserServiceTest {
